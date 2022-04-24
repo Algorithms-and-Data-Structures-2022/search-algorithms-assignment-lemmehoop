@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "assignment/linear_search_iterative.hpp"  // for example
+#include "assignment/linear_search_two_pointers.hpp"  // for example
 
 using namespace std;
 using namespace assignment;
