@@ -20,8 +20,21 @@ namespace assignment {
     //    2) целевой элемент найден
     // 2. Вызовите рекурсивный метод, изменив границы поиска
     //    в зависимости от неравенства между элементом посередине и целевого элемента
+    if (left_index > right_index) {
+      return std::nullopt;
+    }
 
-    return std::nullopt;
+    int mid = (right_index + left_index) / 2;
+
+    if (data[mid] == search_element) {
+      return mid;
+    }
+    if (data[mid] > search_element) {
+      return recursive_helper(data, search_element, left_index, mid - 1);
+    }
+    if (data[mid] < search_element) {
+      return recursive_helper(data, search_element, mid + 1, right_index);
+    }
   }
 
 }  // namespace assignment
